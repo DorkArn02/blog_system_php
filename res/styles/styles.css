@@ -30,9 +30,6 @@ nav h1 a {
     color: white;
 }
 
-nav h1:hover {
-    text-decoration: underline;
-}
 
 nav ul {
     list-style: none;
@@ -46,10 +43,18 @@ nav ul {
 nav ul li a {
     text-decoration: none;
     color: white;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ccc;
+    text-decoration: underline;
 }
 
 nav ul li input {
     padding: 5px;
+    outline: 0;
+    border: 1px solid #ccc;
 }
 
 header {
@@ -136,15 +141,18 @@ footer {
     flex-direction: row;
     gap: 30px;
     margin-top: 50px;
+    padding: 15px;
+    align-items: center;
 }
 
 footer div {
     flex: 1;
+    margin-left: 5%;
 }
 
 footer ul {
     list-style: none;
-    margin-left: 100px;
+    margin-right: 5%;
 }
 
 footer ul li a {
@@ -167,6 +175,10 @@ footer ul li a:hover {
     gap: 20px;
 }
 
+.error a {
+    color: blue;
+}
+
 .success {
     display: flex;
     background-color: rgb(160, 226, 160);
@@ -185,9 +197,14 @@ footer ul li a:hover {
 
 
 .post_header {
-    padding: 10px;
+    padding: 0px;
     display: flex;
     align-items: center;
+}
+
+.post_header h1 {
+    text-transform: capitalize;
+    margin-bottom: 10px;
 }
 
 .post_header div:nth-child(1) {

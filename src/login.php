@@ -50,8 +50,11 @@ if (isset($_SESSION["user_id"])) {
                     $_SESSION["user_id"] = $user_id;
                     $_SESSION["username"] = $username;
                     $_SESSION["email"] = $email;
-
-                    header("location: index.php");
+                    echo '
+                    <p class="success">
+                        You logged in successfully, redirecting...
+                    </p>';
+                    header("refresh: 0.6; URL=index.php");
                 }
             } else {
                 echo '
