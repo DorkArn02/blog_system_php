@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto';
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+nav {
+    display: flex;
+    padding: 10px;
+    background-color: rgba(51, 51, 51, 0.6);
+}
+
+nav h1 {
+    font-weight: bold;
+    flex: 1;
+    color: white;
+    margin-left: 5%;
+}
+
+nav h1 a {
+    text-decoration: none;
+    color: white;
+}
+
+nav h1:hover {
+    text-decoration: underline;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+    margin-right: 5%;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+nav ul li input {
+    padding: 5px;
+}
+
+header {
+    background-image: url("../images/wallpaper.jpg");
+    background-size: cover;
+    margin-bottom: 50px;
+    height: 50vh;
+}
+
+header div {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 70px;
+}
+
+header div h2 {
+    font-size: 45px;
+}
+
+.container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.post {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 50%;
+}
+
+.post a {
+    text-decoration: none;
+    color: rgb(39, 39, 39);
+}
+
+.post a:hover {
+    text-decoration: underline;
+}
+
+.post .subtext {
+    color: gray;
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    padding: 50px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+
+.login input {
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.login button {
+    background-color: #ccc;
+    border: 0;
+    padding: 10px;
+}
+
+.login textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.login button:hover {
+    cursor: pointer;
+    background-color: #ddd;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+footer div {
+    flex: 1;
+}
+
+footer ul {
+    list-style: none;
+    margin-left: 100px;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+footer ul li a:hover {
+    text-decoration: underline;
+}
+
+.error {
+    display: flex;
+    background-color: rgb(226, 160, 160);
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid gray;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.success {
+    display: flex;
+    background-color: rgb(160, 226, 160);
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.profile {
+    color: white;
+    font-weight: bold;
+}
+
+.post_container {
+    width: 50%;
+}
+
+
+.post_header {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.post_header div:nth-child(1) {
+    flex: 1;
+}
+
+.post_header button {
+    padding: 5px;
+    background-color: #ccc;
+    border: 1px solid gray;
+}
+
+.post_header button:hover {
+    cursor: pointer;
+    background-color: #ddd;
+}
+
+.post_content {
+    margin-top: 30px;
+    line-height: 1.5rem;
+}
+
+.post_content h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.post_content ul,
+ol {
+    margin-left: 50px;
+    ;
+}
+
+#search {
+    position: relative;
+}
+
+#search>svg {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+}
+
+#search>input {
+    padding-left: 40px;
+    border-radius: 10px;
+}
