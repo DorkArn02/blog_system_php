@@ -47,7 +47,7 @@ if (isset($_SESSION["user_id"])) {
             } else {
                 echo '
                 <p class="error">
-                    Error: Account with provided username or password exists!
+                    Error: Account with provided username or email exists!
                 </p>';
             }
         }
