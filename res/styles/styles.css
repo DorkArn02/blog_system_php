@@ -37,7 +37,7 @@ nav ul {
     flex-direction: row;
     align-items: center;
     gap: 40px;
-    margin-right: 5%;
+    margin: 0;
 }
 
 nav ul li a {
@@ -245,6 +245,7 @@ ol {
 
 #search {
     position: relative;
+    margin-right: 60px;
 }
 
 #search>svg {
@@ -256,4 +257,38 @@ ol {
 #search>input {
     padding-left: 40px;
     border-radius: 10px;
+    width: 100%;
+}
+
+.header {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.404);
+    padding: 10px;
+}
+
+.header p {
+    text-align: justify;
+}
+
+@media only screen and (max-width: 1000px) {
+    nav {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header {
+        height: 100vh;
+    }
+
+    .post_container {
+        width: 80%;
+    }
 }
