@@ -6,7 +6,7 @@ if (session_status() === PHP_SESSION_NONE) {
 
 ?>
 <nav>
-    <h1><a href="index.php"><span style="color: orange">My</span>Blog</a></h1>
+    <h1><a href="index.php"><span style="color: #ffd68a">My</span>Blog</a></h1>
     <ul>
         <form action="index.php" method="GET">
             <li id="search">
