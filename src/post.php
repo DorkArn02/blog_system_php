@@ -18,7 +18,6 @@ if (session_status() === PHP_SESSION_NONE) {
 
 <body>
     <?php include("./components/header.php"); ?>
-
     <div class="container">
         <div class="post_container">
             <?php
@@ -71,8 +70,78 @@ if (session_status() === PHP_SESSION_NONE) {
             } else {
                 echo "<h1>Post with this id does not exist!</h1>";
             }
-
             ?>
+            <div>
+                <h2>Comments</h2>
+                <?php
+                if (isset($_SESSION["user_id"])) {
+                    if (isset($_POST["content"]) && isset($_GET["id"])) {
+                        require_once("./backend/connection.php");
+
+                        $query = "INSERT INTO comments (post_id, user_id, content, created_at) VALUES (?, ?, ?, NOW())";
+
+                        $stmt = $conn->prepare($query);
+                        $post_id = $_GET["id"];
+                        $content = trim($_POST["content"]);
+
+                        $stmt->bind_param("iis", $post_id, $_SESSION["user_id"], $content);
+
+                        if ($stmt->execute()) {
+                            echo '
+                                <p class="success">
+                                    You have create a new comment successfully!
+                                </p>';
+                        } else {
+                            echo '
+                                <p class="error">
+                                    Error: Something went wrong!
+                                </p>';
+                        }
+                    }
+                ?>
+                    <form method="POST" action="">
+                        <div class="comment_box">
+                            <h3>Write a comment</h3>
+                            <textarea id="content" name="content" placeholder="Post content"></textarea>
+                            <button name="submit" type="submit">Create a new comment</button>
+                        </div>
+                    </form>
+                <?php } else {
+                    echo "<p class='information'>Only logged in users can write comments!</p>";
+                }
+
+                ?>
+                <div class="comment_list">
+                    <?php
+                    if (isset($_GET["id"])) {
+
+                        require_once("./backend/connection.php");
+
+                        $query = "SELECT comments.content, created_at, users.username FROM comments JOIN posts ON comments.post_id=posts.id 
+                    JOIN users ON comments.user_id=users.id
+                    WHERE posts.id=" . $_GET["id"];
+
+                        $result = $conn->query($query);
+
+                        if ($result->num_rows > 0) {
+                            while ($row = $result->fetch_assoc()) {
+
+                                echo "<div class='comment'>";
+                                echo "<b>" . $row["username"] . "</b>";
+                                echo "<small>" . $row["created_at"] . "</small>";
+                                echo "<p>" . $row["content"] . "</p>";
+                                echo "</div>";
+                            }
+                        } else {
+                            echo '
+                    <p >
+                         No comments posted for this post!
+                    </p>';
+                        }
+                    }
+                    ?>
+                </div>
+            </div>
         </div>
     </div>
     <?php include("./components/footer.php") ?>
