@@ -175,6 +175,17 @@ footer ul li a:hover {
     gap: 20px;
 }
 
+.information {
+    display: flex;
+    background-color: rgb(160, 211, 226);
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid gray;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
 .error a {
     color: blue;
 }
@@ -225,6 +236,7 @@ footer ul li a:hover {
 .post_content {
     margin-top: 30px;
     line-height: 1.5rem;
+    margin-bottom: 20px;
 }
 
 .post_content h1,
@@ -269,6 +281,37 @@ ol {
 .header p {
     text-align: justify;
 }
+
+.comment_list {
+    margin-top: 10px;
+}
+
+.comment {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.comment_box button:hover {
+    cursor: pointer;
+}
+
+.comment_box textarea {
+    resize: vertical;
+}
+
+.comment_box {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    padding: 20px;
+}
+
 
 @media only screen and (max-width: 1000px) {
     nav {
