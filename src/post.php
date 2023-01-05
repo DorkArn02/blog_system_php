@@ -53,7 +53,7 @@ if (session_status() === PHP_SESSION_NONE) {
                         echo '<div>';
                         if (isset($_SESSION["username"])) {
                             if ($_SESSION["username"] === $username) {
-                                echo "<a href='delete.php?id=" . $post_id . "'><button>Delete</button></a>";
+                                echo "<a href='delete.php?id=" . $post_id . "'><button class='delete_btn'>Delete your post</button></a>";
                             }
                         }
                         echo '</div>';
@@ -102,7 +102,7 @@ if (session_status() === PHP_SESSION_NONE) {
                     <form method="POST" action="">
                         <div class="comment_box">
                             <h3>Write a comment</h3>
-                            <textarea id="content" name="content" placeholder="Post content"></textarea>
+                            <textarea required id="content" name="content" placeholder="Post content"></textarea>
                             <button name="submit" type="submit">Create a new comment</button>
                         </div>
                     </form>
@@ -130,6 +130,9 @@ if (session_status() === PHP_SESSION_NONE) {
                                 echo "<b>" . $row["username"] . "</b>";
                                 echo "<small>" . $row["created_at"] . "</small>";
                                 echo "<p>" . $row["content"] . "</p>";
+                                // if (isset($_SESSION["user_id"])) {
+                                //     echo "<button>Delete</button>";
+                                // }
                                 echo "</div>";
                             }
                         } else {
