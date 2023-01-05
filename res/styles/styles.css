@@ -4,6 +4,7 @@
     padding: 0;
     margin: 0;
     font-family: 'Roboto';
+    scroll-behavior: smooth;
 }
 
 body {
@@ -135,41 +136,46 @@ header div h2 {
 }
 
 footer {
-    background-color: #333;
+    background-color: rgb(29, 29, 29);
     color: white;
     display: flex;
-    flex-direction: row;
-    gap: 30px;
     margin-top: 50px;
     padding: 15px;
     align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
-footer div {
-    flex: 1;
-    margin-left: 5%;
+footer>div {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
-footer ul {
-    list-style: none;
-    margin-right: 5%;
+footer p {
+    font-size: 15px;
+    color: rgb(179, 179, 179);
 }
 
-footer ul li a {
+footer svg {
+    font-size: 30px;
+}
+
+footer h4 a {
     text-decoration: none;
     color: white;
 }
 
-footer ul li a:hover {
+footer h4 a:hover {
     text-decoration: underline;
 }
 
 .error {
     display: flex;
-    background-color: rgb(226, 160, 160);
+    background-color: rgba(226, 160, 160, 0.6);
     padding: 20px;
     margin-bottom: 20px;
-    border: 1px solid gray;
+    border: 1px solid #ccc;
     flex-direction: column;
     align-items: center;
     gap: 20px;
@@ -177,10 +183,10 @@ footer ul li a:hover {
 
 .information {
     display: flex;
-    background-color: rgb(160, 211, 226);
+    background-color: rgba(160, 211, 226, 0.6);
     padding: 20px;
     margin-bottom: 20px;
-    border: 1px solid gray;
+    border: 1px solid #ccc;
     flex-direction: column;
     align-items: center;
     gap: 20px;
@@ -188,6 +194,16 @@ footer ul li a:hover {
 
 .error a {
     color: blue;
+}
+
+.delete_btn {
+    border: 1px solid #ccc !important;
+    background-color: rgb(237, 191, 191) !important;
+}
+
+.delete_btn:hover {
+    background-color: rgb(228, 161, 161) !important;
+    cursor: pointer;
 }
 
 .success {
@@ -203,18 +219,21 @@ footer ul li a:hover {
 }
 
 .post_container {
-    width: 50%;
+    width: 60%;
+    background-color: white;
 }
 
 
 .post_header {
     padding: 0px;
+    margin-bottom: 10px;
     display: flex;
     align-items: center;
 }
 
 .post_header h1 {
     text-transform: capitalize;
+    letter-spacing: 3px;
     margin-bottom: 10px;
 }
 
@@ -312,6 +331,16 @@ ol {
     padding: 20px;
 }
 
+.comment_box textarea {
+    border: 1px solid #ccc;
+    min-height: 200px;
+    padding: 10px;
+}
+
+.comment_box button {
+    padding: 5px;
+}
+
 
 @media only screen and (max-width: 1000px) {
     nav {
@@ -328,7 +357,7 @@ ol {
     }
 
     header {
-        height: 100vh;
+        height: 85vh;
     }
 
     .post_container {
