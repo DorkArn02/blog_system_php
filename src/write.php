@@ -66,7 +66,7 @@ if (!isset($_SESSION["user_id"])) {
                 <h3>Write a blog post</h3>
                 <input required name="title" type="text" placeholder="Post title" />
                 <input required name="description" type="text" placeholder="Post description" />
-                <textarea id="content" name="content" placeholder="Post content"></textarea>
+                <textarea required id="content" name="content" placeholder="Post content"></textarea>
                 <button name="submit" type="submit">Create</button>
             </div>
         </form>
