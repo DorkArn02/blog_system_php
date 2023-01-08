@@ -40,7 +40,7 @@ In this project I used MySQL database. There are 3 tables in the database: posts
 
 ## Project screenshots
 
-![image](https://user-images.githubusercontent.com/28065716/210362471-e6d01f73-3178-4777-91e2-3f3f2ab0d4c2.png)
+![image](https://user-images.githubusercontent.com/28065716/211207852-7d88c567-91d1-4ef4-8fe2-d1b6c3d5a9ee.png)
 
 ![image](https://user-images.githubusercontent.com/28065716/210362602-cc34d4e5-9499-4e55-b03d-ac38f3541cbd.png)
 
