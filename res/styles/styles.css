@@ -221,8 +221,16 @@ footer h4 a:hover {
 .post_container {
     width: 60%;
     background-color: white;
+    overflow: hidden;
 }
 
+.post_container img {
+    max-width: 100%;
+}
+
+.post_container p {
+    text-align: justify;
+}
 
 .post_header {
     padding: 0px;
