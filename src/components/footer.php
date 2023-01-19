@@ -28,3 +28,11 @@
         <p>&copy; All rights reserved.</p>
     </div>
 </footer>
+<script>
+    const navToggle = document.querySelector(".menubtn");
+    const links = document.querySelector(".navigation");
+
+    navToggle.addEventListener('click', function() {
+        links.classList.toggle("responsive");
+    })
+</script>
